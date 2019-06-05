@@ -15,6 +15,7 @@ function html2svg(body, callback) {
     var canvas = C2S(body.offsetWidth, body.offsetHeight);
     canvas.style = {};
     canvas.getContext = function () { return canvas; }
+    canvas.ownerDocument = body;
     var opts = {
         canvas: canvas,
     }
